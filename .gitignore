@@ -1,2 +1,7 @@
-#data files
-data/
+# data files
+data/raw/*
+data/processed/*
+data/external/*
+data/interim/*
+# local models
+model/*

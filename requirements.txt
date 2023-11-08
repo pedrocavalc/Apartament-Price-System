@@ -1,0 +1,6 @@
+scikit-learn
+mlflow==2.7.0
+fastapi
+uvicorn
+seaborn
+statsmodels
