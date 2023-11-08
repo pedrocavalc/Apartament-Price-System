@@ -11,9 +11,8 @@ class DataManager():
     def get_data(self):
         self.download_data()
         self.unzip_data()
-        self.clean_dirs()
-        self.load_data()
-        self.split_data()
+        file_path = self.clean_dirs()
+        return file_path
 
     def download_data(self):
         try:
@@ -32,6 +31,10 @@ class DataManager():
         for file in files:
             if file.endswith(".7z") or file.endswith(".zip"):
                 os.remove(os.path.join(self.path, file))
+            if file.endswith(".csv"):
+                file_path = os.path.join(self.path, file)
+        return file_path 
+            
 
 
 def main(url, path):
