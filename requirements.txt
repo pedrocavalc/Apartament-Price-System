@@ -4,3 +4,4 @@ fastapi
 uvicorn
 seaborn
 statsmodels
+py7zr
