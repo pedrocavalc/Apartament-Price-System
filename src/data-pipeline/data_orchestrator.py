@@ -1,6 +1,5 @@
 from components.get_data import DataManager
-from components.spliter import SpliterDataPipeline
-from components.preprocessor  import PreProcessor
+from components.preprocessor import SpliterDataPipeline
 
 class DataOrchestrator:
     def __init__(self, source, destination):
@@ -10,7 +9,6 @@ class DataOrchestrator:
         data_manager = DataManager(url, path)
         file_path = data_manager.get_data()
         SpliterDataPipeline().run(file_path)
-        PreProcessor().run(f'../../data/interim/split_data_{id_file}.csv')
 
 def main(url, path, id_file):
     DataOrchestrator.run(url, path, id_file)
