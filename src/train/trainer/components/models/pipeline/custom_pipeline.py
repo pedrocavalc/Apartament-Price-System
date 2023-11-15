@@ -12,3 +12,4 @@ class CustomPipeline():
         numerical_pipeline = StandardScaler()
         column_transform = ColumnTransformer([('categorical_pipeline', cat_pipline, categorical_columns ), ('numerical_pipeline', numerical_pipeline, numerical_columns)])
         return Pipeline([('column_transform', column_transform), ('regressor', model)])
+    

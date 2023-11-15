@@ -5,7 +5,6 @@ from sklearn.neural_network import MLPRegressor
 class ModelsManager():
     def __init__(self) -> None:
         self.model_dict = {"LinearRegression": LinearRegression(), 
-                           "LogisticRegression": LogisticRegression(),
                            "RandomForestRegressor": RandomForestRegressor(), 
                            "MLPRegressor": MLPRegressor(),}
     def get_models_dict(self):
