@@ -3,5 +3,9 @@ data/raw/*
 data/processed/*
 data/external/*
 data/interim/*
+
 # local models
 model/*
+
+# MLFlow runs
+src/train/mlruns
