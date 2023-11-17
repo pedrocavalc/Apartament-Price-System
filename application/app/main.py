@@ -3,6 +3,12 @@ from pydantic import BaseModel
 from fastapi import FastAPI
 import pandas as pd
 import pickle
+import mlflow 
+
+mlflow.set_tracking_uri("http://localhost:5000")
+client = mlflow.tracking.MlflowClient()
+model_metadata = client.get_latest_versions('Teste', stages=['Production'])
+model = mlflow.sklearn.load_model(model_uri=model_metadata[0].source)
 
 class BodyModel(BaseModel):
     currency: str
@@ -19,7 +25,6 @@ class BodyModel(BaseModel):
 
 app = FastAPI()
 
-model = pickle.load(open("../../model/model.sav", "rb"))
 
 @app.post("/predict")
 async def predict(body: BodyModel):
