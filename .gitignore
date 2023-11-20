@@ -7,5 +7,6 @@ data/interim/*
 # local models
 model/*
 
-# MLFlow runs
+# MLFlow db
 src/train/mlruns
+mlflow-db/mlflow.db
