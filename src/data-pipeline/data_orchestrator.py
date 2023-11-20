@@ -2,7 +2,7 @@ from components.get_data import DataManager
 from components.preprocessor import SpliterDataPipeline
 
 class DataOrchestrator:
-    def __init__(self, source, destination):
+    def __init__(self,):
         pass
 
     def run(url, path, id_file):

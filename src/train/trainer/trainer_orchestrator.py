@@ -5,11 +5,11 @@ from trainer.components.models.modelsConfigurations.models_configuration import 
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 
-import mlflow
-
 import warnings
 warnings.filterwarnings("ignore")
 
+import mlflow
+mlflow.set_tracking_uri("http://localhost:5000")
 
 class TrainerOrchestrator():
     def __init__(self, data_path, target, columns):

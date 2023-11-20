@@ -4,8 +4,10 @@ from sklearn.neural_network import MLPRegressor
 
 class ModelsManager():
     def __init__(self) -> None:
-        self.model_dict = {"LinearRegression": LinearRegression(), 
+        self.model_dict = {
+                           #"LinearRegression": LinearRegression(), 
                            "RandomForestRegressor": RandomForestRegressor(), 
-                           "MLPRegressor": MLPRegressor(),}
+                           #"MLPRegressor": MLPRegressor(),
+                           }
     def get_models_dict(self):
         return self.model_dict
